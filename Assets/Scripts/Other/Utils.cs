@@ -7,7 +7,9 @@ public static class Utils
     {
         animator.Play(clipName);
         var animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(animationLength);
-        parent.SetActive(activeStateAtTheEnd);
+        yield return new WaitForSecondsRealtime(animationLength);
+
+        if (parent != null)
+            parent.SetActive(activeStateAtTheEnd);
     }
 }

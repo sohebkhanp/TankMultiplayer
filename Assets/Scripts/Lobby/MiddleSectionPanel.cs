@@ -23,7 +23,7 @@ public class MiddleSectionPanel : LobbyPanelBase
 
         createRoomBtn.onClick.AddListener(()=> CreateRoom(GameMode.Host, createRoomInputField.text));
         joinRoomByArgsBtn.onClick.AddListener(()=> CreateRoom(GameMode.Client, joinRoomByArgsInputField.text));
-
+        joinRandomRoomBtn.onClick.AddListener(JoinRandomRoom);
     }
 
     private void CreateRoom(GameMode mode, string field)
