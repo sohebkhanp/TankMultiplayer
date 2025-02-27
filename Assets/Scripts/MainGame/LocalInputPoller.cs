@@ -11,7 +11,7 @@ public class LocalInputPoller : NetworkBehaviour, INetworkRunnerCallbacks
 
     public override void Spawned()
     {
-        if (Runner.LocalPlayer.Equals(Object.HasInputAuthority))
+        if (Runner.LocalPlayer == Object.InputAuthority)
         {
             Runner.AddCallbacks(this);
         }

@@ -4,6 +4,7 @@ using Fusion.Sockets;
 using System.Collections.Generic;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
 {
@@ -25,6 +26,7 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
         // Register callbacks
         networkRunnerInstance.AddCallbacks(this);
 
+        // player can send input to the server
         networkRunnerInstance.ProvideInput = true;
 
         var startGameArgs = new StartGameArgs()
@@ -59,15 +61,16 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
         Debug.Log("OnPlayerJoined");
         OnPlayerJoinedSuccessfully?.Invoke();
     }
-    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { Debug.Log("OnPlayerLeft"); }
-    public void OnInput(NetworkRunner runner, NetworkInput input) { Debug.Log("OnInput"); }
-    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { Debug.Log("OnInputMissing"); }
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) 
     { 
         Debug.Log("OnShutdown");
         const string LOBBY_SCENE = "Lobby";
         SceneManager.LoadScene(LOBBY_SCENE);
     }
+
+    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { Debug.Log("OnPlayerLeft"); }
+    public void OnInput(NetworkRunner runner, NetworkInput input) { Debug.Log("OnInput"); }
+    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { Debug.Log("OnInputMissing"); }
     public void OnConnectedToServer(NetworkRunner runner) { Debug.Log("OnConnectedToServer"); }
     public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason) { Debug.Log("OnDisconnectedFromServer"); }
     public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { Debug.Log("OnConnectRequest"); }

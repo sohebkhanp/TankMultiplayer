@@ -1,12 +1,23 @@
 # ninja log v5
+29	2240	7621060472898554	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b42385aaab18d3b9
 308	463	7621060455160414	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6e1697a1b248e4ec
 465	615	7621060456632154	E:/Unity/TankMultiplayer/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/71591m01/obj/arm64-v8a/libswappywrapper.so	a3765e4dffb47d30
 40	1062	7621060461150008	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1887407a7da4d1b
-18	1492	7621060465431850	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	8db89b6580161598
-1	1568	7621060466192031	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	62c42cfa93befb0c
-65	1682	7621060467332302	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	bed96c87d9d387b9
 77	1775	7621060468192505	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e1fa89c84d62a632
+18	1492	7621060465431850	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	8db89b6580161598
+65	1682	7621060467332302	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	bed96c87d9d387b9
+1	1568	7621060466192031	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	62c42cfa93befb0c
 90	1784	7621060468372548	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	91aab1a7f1ea17b8
 53	1971	7621060470145293	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f91e9d6fabef8352
-29	2240	7621060472898554	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b42385aaab18d3b9
 2240	2439	7621060474912267	E:/Unity/TankMultiplayer/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/71591m01/obj/arm64-v8a/libgame.so	95f557a417b9d7f8
+64	219	7622785146549387	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6e1697a1b248e4ec
+220	442	7622785148735428	E:/Unity/TankMultiplayer/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/71591m01/obj/arm64-v8a/libswappywrapper.so	a3765e4dffb47d30
+8	1061	7622785154891285	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	62c42cfa93befb0c
+15	1525	7622785159493196	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1887407a7da4d1b
+21	1785	7622785161055671	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	8db89b6580161598
+48	2156	7622785162204092	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	91aab1a7f1ea17b8
+41	2369	7622785162402011	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e1fa89c84d62a632
+56	2371	7622785163561713	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	bed96c87d9d387b9
+34	2372	7622785163621713	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f91e9d6fabef8352
+27	2374	7622785162651642	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b42385aaab18d3b9
+2374	2479	7622785169073497	E:/Unity/TankMultiplayer/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/71591m01/obj/arm64-v8a/libgame.so	95f557a417b9d7f8

@@ -1,31 +1,34 @@
 using Fusion;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSpawnerController : NetworkBehaviour, IPlayerJoined, IPlayerLeft
 {
     [SerializeField] private NetworkPrefabRef playerNetworkPrefab = NetworkPrefabRef.Empty;
-    [SerializeField] private Transform[] SpawnPoints;
-
-    //public override void Spawned()
-    //{
-    //    if (Runner.IsServer)
-    //    {
-    //        foreach (var item in Runner.ActivePlayers)
-    //        {
-    //            SpawnPlayer(item);
-    //        }
-    //    }
-    //}
+    [SerializeField] private Transform[] spawnPoints;
+    public override void Spawned()
+    {
+        //if (Runner.IsServer)
+        //{
+            //foreach (var item in Runner.ActivePlayers)
+            //{
+            //    SpawnPlayer(item);
+            //}
+        //}
+    }
 
     private void SpawnPlayer(PlayerRef playerRef)
     {
         if (Runner.IsServer)
         {
-            var index = playerRef.AsIndex % SpawnPoints.Length;
-            var spawnPoint = SpawnPoints[index].transform.position;
-            var playerObject = Runner.Spawn(playerNetworkPrefab, Vector3.zero, Quaternion.identity, playerRef);
+            int index = playerRef.AsIndex % spawnPoints.Length;
 
+            Vector3 spawnPoint = spawnPoints[index].transform.position;
+            NetworkObject playerObject = Runner.Spawn(playerNetworkPrefab, spawnPoint, Quaternion.identity, playerRef);
             Runner.SetPlayerObject(playerRef, playerObject);
+
+            Debug.LogWarning($"State Authority: {Object.HasStateAuthority}, Input Authority: {Object.HasInputAuthority}");
+
         }
     }
 
